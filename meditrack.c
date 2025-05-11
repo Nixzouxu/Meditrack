@@ -4,6 +4,8 @@
 
 // Fungsi untuk menampilkan header program
 void displayHeader() {
-    // Menampilkan judul program
-    printf("=== MediTrack: Medicine Inventory & Expiry Analyzer ===\n");
+    // Menampilkan judul program dengan border
+    printf("\n========================================\n");
+    printf("  MediTrack: Inventory & Expiry Analyzer  \n");
+    printf("========================================\n");
 }

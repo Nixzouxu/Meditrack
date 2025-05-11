@@ -1,4 +1,4 @@
-# MediTrack: Inventory & Expiry Analyzer
+# MediTrack: Medicine Inventory & Expiry Analyzer
 
 Selamat datang di **MediTrack**! Ini adalah program sederhana yang dirancang untuk membantu apotek atau tempat penyimpanan obat mengelola stok obat dengan lebih mudah. Program ini memungkinkan Anda menambahkan obat, melihat daftar obat, memeriksa obat yang akan segera kadaluwarsa, dan mengelola permintaan obat. Semuanya dilakukan melalui terminal (layar teks di komputer) dengan tampilan yang rapi dan mudah digunakan.
 
@@ -63,11 +63,11 @@ Untuk menjalankan MediTrack di komputer Anda, ikuti langkah-langkah berikut. Jan
 
 ### Langkah-langkah Instalasi
 1. **Unduh Kode**:
-   - Kunjungi repositori GitHub kami di [https://github.com/nama-pengguna-anda/MediTrack](https://github.com/nama-pengguna-anda/MediTrack) (ganti dengan URL repositori Anda).
+   - Kunjungi repositori GitHub kami di [https://github.com/Nixzouxu/MediTrack](https://github.com/Nixzouxu/MediTrack) 
    - Klik tombol **Code** (hijau) lalu pilih **Download ZIP**. Ekstrak file ZIP ke folder pilihan Anda.
    - Atau, jika Anda tahu cara pakai Git, ketik perintah ini di terminal:
      ```bash
-     git clone https://github.com/nama-pengguna-anda/MediTrack.git
+     git clone https://github.com/Nixzouxu/MediTrack.git
      ```
    - Pastikan ada dua file: `meditrack.c` dan `meditrack.h` di folder yang sama.
 
@@ -168,31 +168,13 @@ Masukkan pilihan: _
   - Pesan: "Memproses permintaan: Paracetamol, Jumlah: 10"
   - Pesan: "Stok diperbarui: Paracetamol, Stok Baru: 90"
 
-## Pembagian Tugas Tim
+## Pembagian  Tim
+  * Muhammad Hafidz
+   
+  * Nayla Nabila Syahel
 
-Proyek ini dibuat secara kolaboratif oleh tim kami. Berikut pembagian tugas (sesuaikan dengan anggota tim Anda):
-- **Anggota 1**: Merancang struktur data (Linked List, Min Heap, Queue) dan mengkodekan fungsi inti seperti `addMedicine` dan `getNearestExpiry`.
-- **Anggota 2**: Membuat antarmuka pengguna (UI) dengan efek loading dan clear screen, serta fungsi seperti `showLoading`.
-- **Anggota 3**: Mengelola permintaan obat dengan fungsi seperti `addRequest` dan `processRequest`, serta dokumentasi (README ini).
-- **Semua Anggota**: Menguji program, memperbaiki error (seperti masalah pointer), dan memastikan kode berjalan dengan baik.
+  * Syakila Naira
+   
+  * Muhammad Sulthan Shadiq
 
-## Kontribusi
-
-Jika Anda ingin membantu meningkatkan MediTrack:
-1. Fork repositori ini di GitHub.
-2. Buat perubahan di cabang baru (branch).
-3. Ajukan pull request dengan penjelasan perubahan Anda.
-4. Kami akan meninjau dan mungkin menerima kontribusi Anda!
-
-## Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](https://choosealicense.com/licenses/mit/), yang berarti Anda bebas menggunakan, memodifikasi, dan mendistribusikan kode ini selama Anda mencantumkan kredit kepada pencipta asli.
-
-## Catatan Tambahan
-
-- **Kompatibilitas**: Program ini bekerja di Windows, Linux, dan Mac, asalkan kompiler GCC tersedia.
-- **Perbaikan Error**: Jika Anda menemukan masalah seperti error kompilasi (misalnya, "incompatible pointer types"), pastikan Anda menggunakan file terbaru dari repositori kami. Kami telah memperbaiki masalah tersebut di versi terbaru.
-- **Batasan**: Program ini belum memiliki validasi input (misalnya, memeriksa format tanggal). Ini bisa ditambahkan di masa depan untuk membuatnya lebih kuat.
-- **Presentasi**: Gunakan kode ini untuk demo proyek Anda. Jelaskan struktur data dan UI kepada audiens untuk menunjukkan pemahaman Anda.
-
-Terima kasih telah menggunakan MediTrack! Jika ada pertanyaan atau saran, silakan hubungi kami melalui GitHub atau email tim (jika ada). Semoga sukses dengan presentasi atau penggunaan program ini!
+Terima kasih telah menggunakan MediTrack! Jika ada pertanyaan atau saran, silakan hubungi kami melalui GitHub atau email tim. Semoga sukses!.

@@ -35,3 +35,19 @@ void clearScreen() {
         system("clear");
     #endif
 }
+
+// --- Fungsi Linked List ---
+// Menambahkan obat baru ke Linked List dan Min Heap
+void addMedicine(MedicineNode** head, Medicine med, MinHeap* heap) {
+    // Membuat node baru untuk Linked List
+    MedicineNode* newNode = (MedicineNode*)malloc(sizeof(MedicineNode));
+    newNode->med = med;
+    newNode->next = *head;
+    *head = newNode;
+    // Menambahkan ke Min Heap
+    addToHeap(heap, med.expiry, med.name);
+    printf("\nObat %s berhasil ditambahkan.\n", med.name);
+    printf("Tekan Enter untuk kembali...");
+    getchar(); // Menangkap Enter
+    getchar(); // Menunggu input Enter
+}

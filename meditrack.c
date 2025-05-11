@@ -127,3 +127,60 @@ HeapNode getNearestExpiry(MinHeap* heap) {
     // Kembalikan node di root (kadaluwarsa terdekat)
     return heap->nodes[0];
 }
+
+// --- Fungsi Queue ---
+// Membuat antrian baru
+Queue* createQueue() {
+    // Alokasi memori untuk antrian
+    Queue* queue = (Queue*)malloc(sizeof(Queue));
+    queue->front = NULL;
+    queue->rear = NULL;
+    return queue;
+}
+
+// Menambahkan permintaan obat ke antrian
+void addRequest(Queue* queue, char* medName, int quantity) {
+    // Membuat node baru untuk permintaan
+    RequestObat* newNode = (RequestObat*)malloc(sizeof(RequestObat));
+    strcpy(newNode->medName, medName);
+    newNode->quantity = quantity;
+    newNode->next = NULL;
+    // Jika antrian kosong, node menjadi front dan rear
+    if (!queue->rear) {
+        queue->front = newNode;
+        queue->rear = newNode;
+    } else {
+        // Tambahkan node di belakang antrian
+        queue->rear->next = newNode;
+        queue->rear = newNode;
+    }
+    printf("\nPermintaan ditambahkan: %s, Jumlah: %d\n", medName, quantity);
+    printf("Tekan Enter untuk kembali...");
+    getchar(); 
+    getchar(); // Menunggu input Enter
+}
+
+// Memproses permintaan pertama dari antrian
+void processRequest(Queue* queue, MedicineNode* head) {
+    // Jika antrian kosong, tampilkan pesan
+    if (!queue->front) {
+        printf("\nTidak ada permintaan di antrian.\n");
+        printf("Tekan Enter untuk kembali...");
+        getchar(); 
+        getchar(); // Menunggu input Enter
+        return;
+    }
+    // Ambil permintaan dari depan antrian
+    RequestObat* temp = queue->front;
+    printf("\nMemproses permintaan: %s, Jumlah: %d\n", temp->medName, temp->quantity);
+    // Kurangi stok obat
+    updateStock(head, temp->medName, -temp->quantity);
+    // Pindah ke node berikutnya dan bebaskan memori
+    queue->front = queue->front->next;
+    if (!queue->front) queue->rear = NULL;
+    free(temp);
+    printf("Tekan Enter untuk kembali...");
+    getchar(); 
+    getchar(); // Menunggu input Enter
+}
+

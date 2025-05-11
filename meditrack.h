@@ -42,3 +42,15 @@ typedef struct{
     RequestObat* front;   // Depan antrian
     RequestObat* rear;    // Belakang antrian
 } Queue;
+
+// Deklarasi fungsi
+void displayHeader();
+void addMedicine(MedicineNode** head, Medicine med, MinHeap* heap);
+void showMedicines(MedicineNode* head);
+void updateStock(MedicineNode* head, char* name, int quantity);
+MinHeap* createHeap(int capacity);
+void addToHeap(MinHeap* heap, char* expiry, char* name);
+HeapNode getNearestExpiry(MinHeap* heap);
+Queue* createQueue();
+void addRequest(Queue* queue, char* medName, int quantity);
+void processRequest(Queue* queue, MedicineNode* head);

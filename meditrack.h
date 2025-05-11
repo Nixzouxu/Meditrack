@@ -6,6 +6,12 @@
 #include <string.h>
 #include <time.h>
 
+#ifdef _WIN32
+#include <windows.h> // Untuk Sleep di Windows
+#else
+#include <unistd.h> // Untuk usleep di Linux/Mac
+#endif
+
 // Struct untuk menyimpan data Obat
 typedef struct {
     char name[50];     // nama obat
@@ -45,6 +51,17 @@ typedef struct{
 
 // Deklarasi fungsi
 void displayHeader();
+void showLoading();
+void clearScreen();
+void addMedicine(MedicineNode** head, Medicine med, MinHeap* heap);
+void showMedicines(MedicineNode* head);
+void updateStock(MedicineNode* head, char* name, int quantity);
+MinHeap* createHeap(int capacity);
+void addToHeap(MinHeap* heap, char* expiry, char* name);
+HeapNode getNearestExpiry(MinHeap* heap);
+Queue* createQueue();
+void addRequest(Queue* queue, char* medName, int quantity);
+void processRequest(Queue* queue, MedicineNode* head);
 void addMedicine(MedicineNode** head, Medicine med, MinHeap* heap);
 void showMedicines(MedicineNode* head);
 void updateStock(MedicineNode* head, char* name, int quantity);

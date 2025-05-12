@@ -22,7 +22,7 @@ typedef struct {
 // Node untuk Linked List penyimpanan Obat
 typedef struct MedicineNode {
     Medicine med;               // Data Obat
-    struct MedicineNode* Next;  // Pointer ke node berikutnya
+    struct MedicineNode* next;  // Pointer ke node berikutnya
 } MedicineNode;
 
 // Node untuk Min Heap berdasarkan tanggal kadaluwarsa

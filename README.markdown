@@ -168,13 +168,4 @@ Masukkan pilihan: _
   - Pesan: "Memproses permintaan: Paracetamol, Jumlah: 10"
   - Pesan: "Stok diperbarui: Paracetamol, Stok Baru: 90"
 
-## Pembagian  Tim
-  * Muhammad Hafidz (Pembuatan Kode, Pengimplementasian Struktur data & dokumentasi, debugging & testing dan pembuatan Readme)
-   
-  * Nayla Nabila Syahel ( Membuat Laporan & PPT, Brainstorming ide, partisipan aktif serta turut membantu hafidz untuk pembuatan kode serta tester)
-
-  * Syakila Naira (Tidak bekerja sama sekali dari awal pembuatan laporan sampai push ke github (no commit) , partisipan pasif)
-   
-  * Muhammad Sulthan Shadiq ( Tidak bekerja sama sekali dari awal pembuatan laporan sampai push ke github ( no commit ), partisipan pasif)
-
 Terima kasih telah menggunakan MediTrack! Jika ada pertanyaan atau saran, silakan hubungi kami melalui GitHub atau email tim. Semoga sukses!.
